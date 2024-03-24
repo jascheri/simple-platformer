@@ -8,6 +8,11 @@ TagManager:
   - Beetle
   - Bullet
   - Snail
+  - Spider
+  - Water
+  - Coin
+  - Frog
+  - Boss
   layers:
   - Default
   - TransparentFX

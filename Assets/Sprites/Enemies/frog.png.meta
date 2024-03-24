@@ -154,10 +154,10 @@ TextureImporter:
       name: frog_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 98.6
-        height: 102
+        x: 16
+        y: 4
+        width: 65
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: frog_1
       rect:
         serializedVersion: 2
-        x: 98
-        y: 0
-        width: 98.6
-        height: 102
+        x: 114
+        y: 4
+        width: 65
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: frog_2
       rect:
         serializedVersion: 2
-        x: 196
-        y: 0
-        width: 98.6
-        height: 102
+        x: 203
+        y: 4
+        width: 89
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +217,10 @@ TextureImporter:
       name: frog_3
       rect:
         serializedVersion: 2
-        x: 294
-        y: 0
-        width: 98.6
-        height: 102
+        x: 297
+        y: 7
+        width: 99
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: frog_4
       rect:
         serializedVersion: 2
-        x: 392
-        y: 0
-        width: 98.6
-        height: 102
+        x: 397
+        y: 3
+        width: 95
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,7 +258,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b4004d1743c16e54e8412b905f298efb
     internalID: 0
     vertices: []
     indices: 

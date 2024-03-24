@@ -78,6 +78,7 @@ public class SnailScript : MonoBehaviour
             if (leftHit.collider.gameObject.tag == MyTags.PLAYER_TAG) {
                 if (!stunned) {
                     // Damage Player
+                    leftHit.collider.gameObject.GetComponent<PlayerDamage>().DealDamage();
                 } else {
                     // Push the snail
                     if(tag != MyTags.BEETLE_TAG)
@@ -92,6 +93,7 @@ public class SnailScript : MonoBehaviour
             if (rightHit.collider.gameObject.tag == MyTags.PLAYER_TAG) {
                 if (!stunned) {
                     // Damage Player
+                    rightHit.collider.gameObject.GetComponent<PlayerDamage>().DealDamage();
                 } else {
                     // Push the snail
                     if (tag != MyTags.BEETLE_TAG)
@@ -103,8 +105,9 @@ public class SnailScript : MonoBehaviour
             }
         }
 
-        if (!Physics2D.Raycast(collision_down.position, Vector2.down, 0.1f, layerTarget)) {
-            changeDirection();
+        if (!Physics2D.Raycast(collision_down.position, Vector2.down, 0.1f, layerTarget))
+        {
+                changeDirection();
         }
     }
     private void changeDirection() {
@@ -125,5 +128,33 @@ public class SnailScript : MonoBehaviour
     {
         yield return new WaitForSeconds(timer);
         gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == MyTags.BULLET_TAG)
+        {
+            if(tag == MyTags.BEETLE_TAG)
+            {
+                myAnimator.Play("Stunned");
+                canMove = false;
+                myBody.velocity = new Vector2(0, 0);
+                StartCoroutine(Dead(0.4f));
+            }
+            if(tag == MyTags.SNAIL_TAG)
+            {
+                if(!stunned)
+                {
+                    myAnimator.Play("Stunned");
+                    stunned = true;
+                    canMove = false;
+                    myBody.velocity = new Vector2(0, 0);
+                }
+                else
+                {
+                    gameObject.SetActive(false);
+                }
+            }
+        }
     }
 } // end of class
